@@ -23,6 +23,15 @@ class Ships(Base):
     ships_number = Column(String(10), nullable=False)    
 
     # def to_dict(self):
+    #     return {}   
+
+class Ships(Base):
+    __tablename__ = 'ships'
+    id = Column(Integer, primary_key=False)
+    ships_name = Column(String(10), nullable=False)
+    ships_number = Column(String(10), nullable=False)    
+
+    # def to_dict(self):
     #     return {}    
 
 
