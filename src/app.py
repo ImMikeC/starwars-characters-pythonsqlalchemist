@@ -3,7 +3,7 @@
 
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, DECIMAL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -21,7 +21,7 @@ class Address(Base):
     id = Column(Integer, primary_key=False)
     street_name = Column(String(10))
     street_number = Column(String(10))
-    post_code = Column(String(10), nullable=True)
+    post_code = Column(String(10), nullable=False)
     person = relationship(Person)
 
     # def to_dict(self):
@@ -29,10 +29,9 @@ class Address(Base):
 
 class Ships(Base):
     __tablename__ = 'ships'
-    id = Column(Integer, primary_key=True)
-    ships_name = Column(String(10))
-    ships_number = Column(String(10))    
-    person = relationship(Person)
+    id = Column(Integer, primary_key=False)
+    ships_name = Column(String(10), nullable=False)
+    ships_number = Column(String(10), nullable=False)    
 
     # def to_dict(self):
     #     return {}      
