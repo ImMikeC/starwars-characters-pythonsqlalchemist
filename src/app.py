@@ -22,7 +22,7 @@ class Address(Base):
     street_name = Column(String(10))
     street_number = Column(String(10))
     post_code = Column(String(10), nullable=False)
-    person = relationship(Person)
+    person = relationship(didu)
 
     # def to_dict(self):
     #     return {}
