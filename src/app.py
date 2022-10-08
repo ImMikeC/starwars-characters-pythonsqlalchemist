@@ -16,17 +16,6 @@ class Person(Base):
     id = Column(Integer, primary_key=False)
     name = Column(String(10), nullable=False)
 
-class Address(Base):
-    __tablename__ = 'address'
-    id = Column(Integer, primary_key=False)
-    street_name = Column(String(10))
-    street_number = Column(String(10))
-    post_code = Column(String(10), nullable=False)
-    person = relationship(Person)
-
-    # def to_dict(self):
-    #     return {}
-
 class Ships(Base):
     __tablename__ = 'ships'
     id = Column(Integer, primary_key=False)
