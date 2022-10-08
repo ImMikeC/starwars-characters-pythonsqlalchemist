@@ -1,5 +1,5 @@
 # Committing to github
-# Urgency and rushing again  !!
+# Urgency and rushing again !!
 
 import os
 import sys
@@ -22,7 +22,6 @@ class Address(Base):
     street_name = Column(String(10))
     street_number = Column(String(10))
     post_code = Column(String(10), nullable=True)
-    person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
     # def to_dict(self):
@@ -50,4 +49,4 @@ class Films(Base):
     #     return {} 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n23.png')
+render_er(Base, 'diagram_n24.png')
