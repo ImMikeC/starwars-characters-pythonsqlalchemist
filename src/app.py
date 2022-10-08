@@ -23,18 +23,8 @@ class Ships(Base):
     ships_number = Column(String(10), nullable=False)    
 
     # def to_dict(self):
-    #     return {}      
+    #     return {}    
 
-class Films(Base):
-    __tablename__ = 'films'
-    id = Column(Integer, primary_key=True)
-    films_name = Column(String(10))
-    films_number = Column(String(10))    
-    director = Column(String(10))
-    productor = Column(String(10))
-
-    # def to_dict(self):
-    #     return {} 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n24.png')
+render_er(Base, 'diagram_n28.png')
