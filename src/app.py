@@ -1,4 +1,4 @@
-# 21th commit to github
+# Committing to github
 # Urgency and rushing again!!
 
 import os
@@ -13,12 +13,12 @@ Base = declarative_base()
 
 class Person(Base):
     __tablename__ = 'person'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=True)
+    id = Column(Integer, primary_key=False)
+    name = Column(String(250), nullable=False)
 
 class Address(Base):
     __tablename__ = 'address'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=False)
     street_name = Column(String(250))
     street_number = Column(String(250))
     post_code = Column(String(250), nullable=True)
