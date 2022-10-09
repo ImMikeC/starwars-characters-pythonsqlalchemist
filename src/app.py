@@ -36,17 +36,7 @@ class Ships(Base):
     person = relationship(Person)
 
     def to_dict(self):
-        return {}   
-
-class Planets(Base):
-    __tablename__ = 'planets'
-    id = Column(Integer, primary_key=True)
-    planets_name = Column(String(250))
-    planets_number = Column(String(250))    
-    person = relationship(Person)
-
-    def to_dict(self):
-        return {}     
+        return {}      
 
 class Films(Base):
     __tablename__ = 'films'
