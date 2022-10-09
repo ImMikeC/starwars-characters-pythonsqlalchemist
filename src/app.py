@@ -60,4 +60,4 @@ class Films(Base):
         return {} 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n5.png')
+render_er(Base, 'diagram_n15.png')
