@@ -25,8 +25,8 @@ class Address(Base):
     person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
-    def to_dict(self):
-        return {}
+    # def to_dict(self):
+    #     return {}
 
 class Ships(Base):
     __tablename__ = 'ships'
@@ -35,8 +35,8 @@ class Ships(Base):
     ships_number = Column(String(10))    
     person = relationship(Person)
 
-    def to_dict(self):
-        return {}      
+    # def to_dict(self):
+    #     return {}      
 
 class Films(Base):
     __tablename__ = 'films'
@@ -46,8 +46,8 @@ class Films(Base):
     director = Column(String(10))
     productor = Column(String(10))
 
-    def to_dict(self):
-        return {} 
+    # def to_dict(self):
+    #     return {} 
 
 ## Draw from SQLAlchemy base
 render_er(Base, 'diagram_n23.png')
