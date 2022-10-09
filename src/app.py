@@ -14,14 +14,14 @@ Base = declarative_base()
 class Person(Base):
     __tablename__ = 'person'
     id = Column(Integer, primary_key=False)
-    name = Column(String(250), nullable=False)
+    name = Column(String(10), nullable=False)
 
 class Address(Base):
     __tablename__ = 'address'
     id = Column(Integer, primary_key=False)
-    street_name = Column(String(250))
-    street_number = Column(String(250))
-    post_code = Column(String(250), nullable=True)
+    street_name = Column(String(10))
+    street_number = Column(String(10))
+    post_code = Column(String(10), nullable=True)
     person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
@@ -31,8 +31,8 @@ class Address(Base):
 class Ships(Base):
     __tablename__ = 'ships'
     id = Column(Integer, primary_key=True)
-    ships_name = Column(String(250))
-    ships_number = Column(String(250))    
+    ships_name = Column(String(10))
+    ships_number = Column(String(10))    
     person = relationship(Person)
 
     def to_dict(self):
@@ -41,13 +41,13 @@ class Ships(Base):
 class Films(Base):
     __tablename__ = 'films'
     id = Column(Integer, primary_key=True)
-    films_name = Column(String(25))
-    films_number = Column(String(251))    
-    director = Column(String(250))
-    productor = Column(String(250))
+    films_name = Column(String(10))
+    films_number = Column(String(10))    
+    director = Column(String(10))
+    productor = Column(String(10))
 
     def to_dict(self):
         return {} 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n15.png')
+render_er(Base, 'diagram_n23.png')
