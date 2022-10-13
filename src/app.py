@@ -1,5 +1,5 @@
-# 19th commit to github
-# Urgency and rushing again & again!!
+# 20th commit to github
+# Urgency and rushing again!!
 
 import os
 import sys
@@ -11,12 +11,11 @@ from eralchemy import render_er
 
 Model = declarative_base()
 
-class Actress(Model):
-    __tablename__ = 'actress'
-    id = Column(Integer, primary_key=False)
-    name = Column(String(251))
-    lastname = Column(String(251))  
-    age = Column(Integer)  
+class Ships(Model):
+    __tablename__ = 'ships'
+    id = Column(Integer, primary_key=True)
+    ships_name = Column(String(250))
+    ships_number = Column(String(250))    
 
     def to_dict(self):
         return {}   
