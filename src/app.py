@@ -1,4 +1,4 @@
-# 17th commit to github
+# 18th commit to github
 # Urgency and rushing again & again!!
 
 import os
@@ -14,8 +14,8 @@ Model = declarative_base()
 class Actress(Model):
     __tablename__ = 'actress'
     id = Column(Integer, primary_key=False)
-    name = Column(String(1))
-    lastname = Column(String(1))  
+    name = Column(String(251))
+    lastname = Column(String(251))  
     age = Column(Integer)  
 
     def to_dict(self):
@@ -25,7 +25,7 @@ class Planets(Model):
     __tablename__ = 'planets'
     id = Column(Integer, primary_key=True)
     planets_name = Column(String(1))
-    planets_number = Column(String(1))    
+    planets_number = Column(String(251))    
 
     def to_dict(self):
         return {}     
