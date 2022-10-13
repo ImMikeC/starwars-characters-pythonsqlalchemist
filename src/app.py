@@ -1,4 +1,4 @@
-# 18th commit to github
+# 19th commit to github
 # Urgency and rushing again & again!!
 
 import os
@@ -24,7 +24,7 @@ class Actress(Model):
 class Planets(Model):
     __tablename__ = 'planets'
     id = Column(Integer, primary_key=True)
-    planets_name = Column(String(1))
+    planets_name = Column(String(251))
     planets_number = Column(String(251))    
 
     def to_dict(self):
