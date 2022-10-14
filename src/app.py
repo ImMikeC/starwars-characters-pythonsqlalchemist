@@ -13,7 +13,7 @@ Model = declarative_base()
 
 class Actress(Model):
     __tablename__ = 'actress'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=False)
     name = Column(String(251))
     lastname = Column(String(251))  
     age = Column(Integer)  
