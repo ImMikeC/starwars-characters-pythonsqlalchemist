@@ -15,7 +15,7 @@ class Actress(Model):
     __tablename__ = 'actress'
     id = Column(Integer, primary_key=True)
     name = Column(String(250))
-    lastname = Column(String(250))  
+    lastname = Column(String(251))  
     age = Column(Integer)  
 
     def to_dict(self):
