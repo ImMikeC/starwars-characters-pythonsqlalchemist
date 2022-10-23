@@ -9,46 +9,27 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 from eralchemy import render_er
 
-Base = declarative_base()
+Model = declarative_base()
 
-class Person(Base):
-    __tablename__ = 'person'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=True)
-
-class Address(Base):
-    __tablename__ = 'address'
-    id = Column(Integer, primary_key=True)
-    street_name = Column(String(250))
-    street_number = Column(String(250))
-    post_code = Column(String(250), nullable=True)
-    person_id = Column(Integer, ForeignKey('person.id'))
-    person = relationship(Person)
-
-    def to_dict(self):
-        return {}
-
-class Ships(Base):
+class Ships(Model):
     __tablename__ = 'ships'
     id = Column(Integer, primary_key=True)
     ships_name = Column(String(250))
     ships_number = Column(String(250))    
-    person = relationship(Person)
 
     def to_dict(self):
         return {}   
 
-class Planets(Base):
+class Planets(Model):
     __tablename__ = 'planets'
     id = Column(Integer, primary_key=True)
-    planets_name = Column(String(250))
-    planets_number = Column(String(250))    
-    person = relationship(Person)
+    planets_name = Column(String(251))
+    planets_number = Column(String(251))    
 
     def to_dict(self):
         return {}     
 
-class Films(Base):
+class Films(Model):
     __tablename__ = 'films'
     id = Column(Integer, primary_key=True)
     films_name = Column(String(251))
@@ -60,4 +41,4 @@ class Films(Base):
         return {} 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n5.png')
+render_er(Model, 'diagram_n5.png')
