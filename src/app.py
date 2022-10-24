@@ -51,10 +51,10 @@ class Planets(Base):
 class Films(Base):
     __tablename__ = 'films'
     id = Column(Integer, primary_key=True)
-    films_name = Column(String(250))
-    films_number = Column(String(250))    
-    director = Column(String(250))
-    productor = Column(String(250))
+    films_name = Column(String(251))
+    films_number = Column(String(251))    
+    director = Column(String(251))
+    productor = Column(String(251))
 
     def to_dict(self):
         return {} 
