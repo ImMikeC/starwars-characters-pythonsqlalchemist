@@ -14,14 +14,14 @@ Base = declarative_base()
 class Person(Base):
     __tablename__ = 'person'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
+    name = Column(String(250), nullable=True)
 
 class Address(Base):
     __tablename__ = 'address'
     id = Column(Integer, primary_key=True)
     street_name = Column(String(250))
     street_number = Column(String(250))
-    post_code = Column(String(250), nullable=False)
+    post_code = Column(String(250), nullable=True)
     person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
@@ -47,6 +47,17 @@ class Planets(Base):
 
     def to_dict(self):
         return {}     
+
+class Films(Base):
+    __tablename__ = 'films'
+    id = Column(Integer, primary_key=True)
+    films_name = Column(String(250))
+    films_number = Column(String(250))    
+    director = Column(String(250))
+    productor = Column(String(250))
+
+    def to_dict(self):
+        return {} 
 
 ## Draw from SQLAlchemy base
 render_er(Base, 'diagram_n5.png')
