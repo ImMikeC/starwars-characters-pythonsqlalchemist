@@ -27,4 +27,4 @@ class Ships(Base):
 
 
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n29.png')
+render_er(Base, 'diagram_n30.png')
