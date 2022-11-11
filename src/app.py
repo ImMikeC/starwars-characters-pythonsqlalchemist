@@ -1,3 +1,5 @@
+# Fifth commit to github
+
 import os
 import sys
 from sqlalchemy import Column, ForeignKey, Integer, String
@@ -29,5 +31,17 @@ class Address(Base):
     def to_dict(self):
         return {}
 
+class Ships(Base):
+    __tablename__ = 'ships'
+    # Here we define columns for the table address.
+    # Notice that each column is also a normal Python instance attribute.
+    id = Column(Integer, primary_key=True)
+    ships_name = Column(String(250))
+    ships_number = Column(String(250))    
+    person = relationship(Person)
+
+    def to_dict(self):
+        return {}        
+
 ## Draw from SQLAlchemy base
-render_er(Base, 'diagram_n3.png')
+render_er(Base, 'diagram_n5.png')
